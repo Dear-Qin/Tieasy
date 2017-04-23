@@ -3,6 +3,7 @@ package zz.haut.tieasy.home.activity;
 import android.os.Build;
 import android.support.annotation.RequiresApi;
 import android.support.v4.widget.SwipeRefreshLayout;
+import android.util.Log;
 import android.util.TypedValue;
 import android.view.View;
 import android.widget.EditText;
@@ -88,7 +89,7 @@ public class HomeActivity extends BaseActivity {
 
     public void initData() {
 
-
+        Log.e("HomeActivity", "upload to github");
 
     }
 
