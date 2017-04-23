@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <!--HomeActivity-->
+    <color name="colorWrite">#FFFFFF</color>
+    <color name="colorBlack">#000000</color>
+    <color name="colorFoucsSelect">#c14b2b</color>
+    <color name="colorFoucs">#FF302F3D</color>
+    <color name="titleLine">#d88176</color>
+    <color name="titleBack">#BE2D1A</color>
+</resources>

@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mainLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/titleBack"
+        android:paddingTop="30px"
+        android:paddingLeft="30px"
+        android:paddingRight="30px"
+        android:paddingBottom="20px">
+
+        <ImageView
+            android:id="@+id/mIVTitleSearch"
+            android:layout_width="30px"
+            android:layout_height="30px"
+            android:layout_marginBottom="10px"
+            android:src="@mipmap/main_search" />
+
+        <EditText
+            android:id="@+id/mETTitleSearch"
+            android:layout_width="420px"
+            android:layout_height="30px"
+            android:layout_marginLeft="10px"
+            android:background="@null"
+            android:hint="搜索关键字"
+            android:textColorHint="@color/titleLine"
+            android:textColor="@color/colorWrite"
+            android:focusable="false"
+            android:textSize="30px"
+            android:layout_alignParentTop="true"
+            android:layout_toEndOf="@+id/mIVTitleSearch" />
+
+        <View
+            android:layout_width="495px"
+            android:layout_height="1px"
+            android:layout_below="@id/mIVTitleSearch"
+            android:background="@color/titleLine" />
+
+        <ImageView
+            android:id="@+id/mIVAdd"
+            android:layout_width="47px"
+            android:layout_height="47px"
+            android:layout_alignParentRight="true"
+            android:src="@mipmap/ic_launcher" />
+    </com.zhy.autolayout.AutoRelativeLayout>
+
+
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/srl"
+        xmlns:cube_ptr="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+
+        cube_ptr:ptr_resistance="1.7"
+        cube_ptr:ptr_ratio_of_header_height_to_refresh="1.2"
+        cube_ptr:ptr_duration_to_close="300"
+        cube_ptr:ptr_duration_to_close_header="2000"
+        cube_ptr:ptr_keep_header_when_refresh="true"
+        cube_ptr:ptr_pull_to_fresh="false" >
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ImageView
+                android:id="@+id/glide"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <FrameLayout
+                android:id="@+id/contentFrame"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"></FrameLayout>
+        </LinearLayout>
+
+
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+
+    <com.zhy.autolayout.AutoLinearLayout
+        android:id="@+id/mLLImageGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorWrite"
+        android:elevation="1dp"
+        android:orientation="horizontal"
+        android:paddingBottom="10px"
+        android:paddingTop="10px">
+
+        <com.zhy.autolayout.AutoLinearLayout
+            android:id="@+id/mLLHome"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/mIVHome"
+                android:layout_width="40px"
+                android:layout_height="40px"
+                android:src="@mipmap/pager_home" />
+
+            <TextView
+                android:id="@+id/mTVHome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10px"
+                android:text="首页"
+                android:textColor="@color/colorFoucs"
+                android:textSize="24px" />
+        </com.zhy.autolayout.AutoLinearLayout>
+
+        <com.zhy.autolayout.AutoLinearLayout
+            android:id="@+id/mLLClassify"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/mIVClassify"
+                android:layout_width="40px"
+                android:layout_height="40px"
+                android:src="@mipmap/pager_classify" />
+
+            <TextView
+                android:id="@+id/mTVClassify"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10px"
+                android:text="分类"
+                android:textColor="@color/colorFoucs"
+                android:textSize="24px" />
+        </com.zhy.autolayout.AutoLinearLayout>
+
+        <com.zhy.autolayout.AutoLinearLayout
+            android:id="@+id/mLLGroup"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/mIVGroup"
+                android:layout_width="40px"
+                android:layout_height="40px"
+                android:src="@drawable/group_selector" />
+
+            <TextView
+                android:id="@+id/mTVGroup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10px"
+                android:text="圈子"
+                android:textColor="@color/colorFoucs"
+                android:textSize="24px" />
+        </com.zhy.autolayout.AutoLinearLayout>
+
+        <com.zhy.autolayout.AutoLinearLayout
+            android:id="@+id/mLLMy"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/mIVMy"
+                android:layout_width="40px"
+                android:layout_height="40px"
+                android:src="@mipmap/pager_my" />
+
+            <TextView
+                android:id="@+id/mTVMy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10px"
+                android:text="我的"
+                android:textColor="@color/colorFoucs"
+                android:textSize="24px" />
+        </com.zhy.autolayout.AutoLinearLayout>
+
+
+    </com.zhy.autolayout.AutoLinearLayout>
+</com.zhy.autolayout.AutoLinearLayout>
